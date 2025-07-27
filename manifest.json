@@ -1,0 +1,25 @@
+﻿{
+  "manifest_version": 3,
+  "name": "Studocu PDF Downloader",
+  "version": "1.0",
+  "description": "Download StudoCu documents as PDF",
+  "icons": { "128" : "icon.png"},
+  "permissions": [
+    "activeTab",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://www.studocu.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Download as PDF"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.studocu.com/*/document/*"],
+      "js": ["content.js"]
+    }
+  ]
+
+}
